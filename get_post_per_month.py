@@ -11,10 +11,11 @@ def get_post_per_month(data:dict)->dict:
     Returns: 
         dict: a dictionary with the number of posts for each month
     """
-    number_of_month_msg: int = 0
+    
     month_msgs_number: dict = {}
     
     for month in range(1, 13):
+        number_of_month_msg: int = 0
         for post in data["messages"]:
             if post["type"] == "message":
                 i = int(post["date_unixtime"])
